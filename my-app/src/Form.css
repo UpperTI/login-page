@@ -1,45 +1,138 @@
-.text-box-1, .text-box-2 {
-    width: 300px;
-    height: 25px;
+* {
+    font-family: 'Tilt Neon', sans-serif;
+    margin-left: 13%;
+    margin-right: 13%;
+    padding: 0;
 }
 
-h2 {
-    font-size: 30px ;
-    font-family: sans-serif;
-}
-
-
-.link {
+.sign-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
-}
 
-
-.picture-1, .picture-2, .picture-3 {
-    border: 2px solid black;
+    background-color: rgb(245, 245, 245) ;
     border-radius: 10px;
+  }
 
-    width: 55px;
-    height: 55px;
+h1 {
+    font-size: 35px;
+    align-self: flex-start;
+  }
+  
+    .text-box-1, .text-box-2 {
+    width: 90%; /* Reduzindo a largura para que se ajuste em telas menores */
+    max-width: 500px; /* Definindo uma largura máxima para evitar que o campo de entrada fique muito largo */
+    
+    margin-top: 10px; /* Diminuindo a margem superior para economizar espaço */
+    border-color: #048c7c;
+    border-radius: 7px;
+  }
+  
+    p {
+    font-size: 13px;
 
-    max-width: 55px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10%; 
-}
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin: 0;
+  }
 
+  .login-button {
+    width: 90%; /* Ajustando a largura para ocupar a maior parte do contêiner */
+    max-width: 230px; /* Definindo uma largura máxima para manter a consistência */
+    height: 25px;
+  
+    margin-top: 10%;
+  
+    font-size: 15px;
+    
+    color: white;
+    background-color: #048c7c;
+    border: NONE;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 10px;
+  }
 
+  .picture-1, .picture-2, .picture-3 {
+    width: 50px; /* Reduzindo o tamanho das imagens para economizar espaço */
+    height: 50px;
+    max-width: 40px;
+    margin: 2% 2% 2% 2% /* Diminuindo a margem superior para economizar espaço */
+  }
 
-h3 {
-    font-size: 15px ;
-    font-family: sans-serif;
-
+  .link {
     display: flex;
     align-items: center;
     justify-content: center; 
+  }
+
+  h3, spam {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 5%; /* Diminuindo a margem superior para economizar espaço */
+    
+  }
+
+
+
+
+  h3:hover {
+    color: red;
+  }
+  
+  .login-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  
+
+.text-box-1::placeholder {
+    color: rgba(128, 128, 128, 0.623);
+}
+.text-box-2::placeholder {
+    color: rgba(128, 128, 128, 0.623);
 }
 
-h3:hover {
-    color: red;
-}
+  p:hover {
+    color: #048c7c;
+  }
+  
+  /* Estilos para telas pequenas (celulares) */
+  @media (max-width: 480px) {
+    h1 {
+      margin-top: 10%; /* Reduzindo a margem superior para telas menores */
+    }
+  
+    .form-components {
+      margin-left: 10%; /* Ajustando as margens para ocupar menos espaço */
+      margin-right: 10%;
+    }
+  }
+
+    /* Estilos para telas médias (tablets) */
+@media (min-width: 768px) {
+    .text-box-1, .text-box-2 {
+        width: 70%; /* Reduzindo ainda mais a largura para telas maiores */
+        max-width: 300px;
+        margin-top: 15px; /* Aumentando um pouco a margem superior */
+    }
+  
+    .picture-1, .picture-2, .picture-3 {
+        width: 50px; /* Aumentando o tamanho das imagens para telas maiores */
+        height: 50px;
+        max-width: 50px;
+        margin-top: 8%; /* Ajustando a margem superior */
+    }
+  
+    h3 {
+        margin-top: 6%; /* Ajustando a margem superior */
+    }
+  }
+
